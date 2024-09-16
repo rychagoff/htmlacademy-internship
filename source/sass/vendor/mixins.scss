@@ -1,0 +1,28 @@
+@mixin font-face ($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: url("#{$font-src}.woff2") format("woff2"),
+         url("#{$font-src}.woff") format("woff");
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin viewport-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin viewport-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
