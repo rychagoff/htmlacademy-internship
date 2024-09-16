@@ -1,3 +1,22 @@
+.list {
+  @include reset-list;
+}
+
+.list__item {
+  background-color: inherit;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 42px;
+    mask-image: url("../../img/sprite/star.svg");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: $white-color;
+  }
+}
+
 .list__item h4 {
   font-size: 16px;
   font-weight: 400;
