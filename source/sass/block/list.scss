@@ -1,23 +1,44 @@
 .list {
   @include reset-list;
-}
 
-.list__item {
-  background-color: inherit;
-
-  &::before {
+  &--advantages .list__item::before,
+  &--advantages .list__item::after {
     content: "";
-    display: block;
+    position: absolute;
+  }
+
+  &--advantages .list__item::before {
+    top: -22px;
+    left: -20px;
     width: 42px;
     height: 42px;
+    background-color: $white-color;
     mask-image: url("../../img/sprite/star.svg");
+    mask-size: 50%;
     mask-position: center;
     mask-repeat: no-repeat;
-    background-color: $white-color;
+    z-index: 2;
+  }
+
+  &--advantages .list__item::after {
+    top: -1px;
+    left: -1px;
+    width: 22px;
+    height: 20px;
+    background-color: $accent-color;
   }
 }
 
+.list__item {
+  position: relative;
+  padding: 15px 20px;
+  border: 1px solid $white-color;
+  border-radius: 16px;
+}
+
 .list__item h4 {
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
@@ -25,6 +46,7 @@
 }
 
 .list__item p {
+  margin: 0;
   font-weight: 300;
   color: inherit;
 }

@@ -1,4 +1,10 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid $accent-color;
+  border-radius: 30px;
+
   &--text {
     font-size: 12px;
     line-height: 12px;
@@ -6,12 +12,29 @@
     letter-spacing: calc(12px * 2 / 100);
     text-transform: uppercase;
     text-decoration: none;
+  }
+
+  &--text span:not(.button__icon) {
+    margin-left: 16px;
+    margin-right: 20px;
+  }
+
+  &--light {
     color: $accent-color;
+  }
+
+  &--light svg {
+    color: $white-color;
   }
 }
 
-.button svg {
+.button__icon {
+  display: block;
   padding: 13px;
-  color: $white-color;
   background-color: $accent-color;
+  border-radius: 100%;
+}
+
+.button svg {
+  display: block;
 }
