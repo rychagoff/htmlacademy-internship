@@ -1,0 +1,124 @@
+.about {
+  background-color: $grey-color;
+}
+
+.about__inner {
+  display: grid;
+  gap: 40px;
+
+  @include viewport-desktop {
+    grid-template-columns: 702px 498px;
+    row-gap: 60px;
+  }
+}
+
+.about__title {
+  margin-bottom: 15px;
+
+  @include viewport-tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.about__header {
+  margin-right: 40px;
+
+  @include viewport-desktop {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+}
+
+.about__header p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include viewport-tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include viewport-desktop {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.about__description {
+  @include viewport-tablet {
+    margin-right: 180px;
+    margin-bottom: 20px;
+  }
+
+  @include viewport-desktop {
+    margin: 0;
+    padding-top: 10px;
+  }
+}
+
+.about__description h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $accent-color;
+
+  @include viewport-tablet {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include viewport-desktop {
+    margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.about__description p {
+  margin-bottom: 30px;
+
+  @include viewport-tablet {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  @include viewport-desktop {
+    margin-bottom: 50px;
+    line-height: 26px;
+  }
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 42px 20px 40px;
+  color: $white-color;
+  background-color: $accent-color;
+  border-radius: 20px;
+
+  @include viewport-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 72px 50px 50px 70px;
+    column-gap: 52px;
+    row-gap: 54px;
+  }
+
+  @include viewport-desktop {
+    grid-column: 1 / -1;
+    padding: 72px 100px 50px 120px;
+  }
+}
+
+.about__list .list__item {
+  @include viewport-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}

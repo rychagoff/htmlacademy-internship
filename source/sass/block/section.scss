@@ -1,0 +1,7 @@
+.section {
+  padding: 50px 0;
+
+  @include viewport-desktop {
+    padding: 60px 0;
+  }
+}
