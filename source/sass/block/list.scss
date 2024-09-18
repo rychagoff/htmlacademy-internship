@@ -34,6 +34,10 @@
   padding: 15px 20px;
   border: 1px solid $white-color;
   border-radius: 16px;
+
+  @include viewport-desktop {
+    padding: 30px 40px;
+  }
 }
 
 .list__item h4 {
@@ -41,13 +45,28 @@
   margin-bottom: 15px;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: calc(16px * 1 / 100);
+  letter-spacing: calc(1em * 1 / 100);
   text-transform: uppercase;
   color: inherit;
+
+  @include viewport-tablet {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @include viewport-desktop {
+    margin-bottom: 0;
+    font-size: 26px;
+    line-height: 30px;
+  }
 }
 
 .list__item p {
   margin: 0;
   font-weight: 300;
-  color: inherit;
+  color: $grey-color;
+
+  @include viewport-tablet {
+    font-size: 16px;
+  }
 }

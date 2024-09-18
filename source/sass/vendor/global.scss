@@ -1,3 +1,15 @@
+:root {
+  --padding-offset: 15px;
+
+  @include viewport-tablet {
+    --padding-offset: 45px;
+  }
+
+  @include viewport-desktop {
+    --padding-offset: 100px;
+  }
+}
+
 *,
 *::before,
 *::after {
