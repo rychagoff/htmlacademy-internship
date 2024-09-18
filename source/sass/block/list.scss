@@ -8,8 +8,8 @@
   }
 
   &--advantages .list__item::before {
-    top: -22px;
-    left: -20px;
+    top: -23px;
+    left: -21px;
     width: 42px;
     height: 42px;
     background-color: $white-color;
@@ -41,6 +41,7 @@
   margin-bottom: 15px;
   font-size: 16px;
   font-weight: 400;
+  letter-spacing: calc(16px * 1 / 100);
   text-transform: uppercase;
   color: inherit;
 }

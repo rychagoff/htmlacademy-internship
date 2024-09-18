@@ -2,6 +2,12 @@
   background-color: $grey-color;
 }
 
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .about__title {
   margin-bottom: 15px;
 }
@@ -26,7 +32,11 @@
 }
 
 .about__list {
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 42px 20px 40px;
   color: $white-color;
   background-color: $accent-color;
+  border-radius: 20px;
 }

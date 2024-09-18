@@ -1,3 +1,7 @@
+:root {
+  --padding-offset: 15px;
+}
+
 // FONT
 
 $primary-font: "Manrope", "Arial", sans-serif;
@@ -19,3 +23,7 @@ $disabled-color: #a9afb7;
 
 $tablet-width: 768px;
 $desktop-width: 1440px;
+
+// OFFSET
+
+$padding-offset: var(--padding-offset);
