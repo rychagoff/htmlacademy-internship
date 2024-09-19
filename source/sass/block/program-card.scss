@@ -1,4 +1,24 @@
-.program-card p {
+.program-card__title {
+  flex-basis: 100%;
+  margin-bottom: 18px;
+}
+
+.program-card__content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 18px 18px 15px;
+  background-color: $white-color;
+  border-radius: 12px;
+  clip-path: polygon(0 42px, 0 12px, 0 12px, 0.12px 9.72px, 0.48px 7.68px, 1.08px 5.88px, 1.92px 4.32px, 3px 3px, 4.32px 1.92px, 5.88px 1.08px, 7.68px 0.48px, 9.72px 0.12px, 12px 0, calc(100% - 130px) 0, calc(100% - 130px) 0, calc(100% - 127.72px) 0.12px, calc(100% - 125.68px) 0.48px, calc(100% - 123.88px) 1.08px, calc(100% - 122.32px) 1.92px, calc(100% - 121px) 3px, calc(100% - 119.92px) 4.32px, calc(100% - 119.08px) 5.88px, calc(100% - 118.48px) 7.68px, calc(100% - 118.12px) 9.72px, calc(100% - 118px) 12px, calc(100% - 118px) 30px, calc(100% - 118px) 30px, calc(100% - 117.88px) 32.28px, calc(100% - 117.52px) 34.32px, calc(100% - 116.92px) 36.12px, calc(100% - 116.08px) 37.68px, calc(100% - 115px) 39px, calc(100% - 113.68px) 40.08px, calc(100% - 112.12px) 40.92px, calc(100% - 110.32px) 41.52px, calc(100% - 108.28px) 41.88px, calc(100% - 106px) 42px, calc(100% - 12px) 42px, calc(100% - 12px) 42px, calc(100% - 9.72px) 42.12px, calc(100% - 7.68px) 42.48px, calc(100% - 5.88px) 43.08px, calc(100% - 4.32px) 43.92px, calc(100% - 3px) 45px, calc(100% - 1.92px) 46.32px, calc(100% - 1.08px) 47.88px, calc(100% - 0.48px) 49.68px, calc(100% - 0.12px) 51.72px, calc(100% - 0px) 54px, calc(100% - 0px) calc(100% - 12px), calc(100% - 0px) calc(100% - 12px), calc(100% - 0.12px) calc(100% - 9.72px), calc(100% - 0.48px) calc(100% - 7.68px), calc(100% - 1.08px) calc(100% - 5.88px), calc(100% - 1.92px) calc(100% - 4.32px), calc(100% - 3px) calc(100% - 3px), calc(100% - 4.32px) calc(100% - 1.92px), calc(100% - 5.88px) calc(100% - 1.08px), calc(100% - 7.68px) calc(100% - 0.48px), calc(100% - 9.72px) calc(100% - 0.12px), calc(100% - 12px) calc(100% - 0px), 12px calc(100% - 0px), 12px calc(100% - 0px), 9.72px calc(100% - 0.12px), 7.68px calc(100% - 0.48px), 5.88px calc(100% - 1.08px), 4.32px calc(100% - 1.92px), 3px calc(100% - 3px), 1.92px calc(100% - 4.32px), 1.08px calc(100% - 5.88px), 0.48px calc(100% - 7.68px), 0.12px calc(100% - 9.72px), 0 calc(100% - 12px), 0 42px);
+}
+
+.program-card__content p {
+  max-width: 188px;
+  margin: 0;
   font-size: 12px;
   line-height: 14px;
+}
+
+.program-card__link {
+  margin-left: auto;
 }

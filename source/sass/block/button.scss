@@ -36,6 +36,11 @@
   &--light svg {
     color: $white-color;
   }
+
+  &--no-border {
+    padding: 0;
+    border: 0;
+  }
 }
 
 .button__icon {
@@ -46,6 +51,10 @@
 
   @include viewport-tablet {
     padding: 19px;
+  }
+
+  &--small {
+    padding: 11px;
   }
 }
 
