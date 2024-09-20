@@ -65,10 +65,11 @@
 
       <section class="section programs" data-test="programs">
         <div class="container">
-          <div class="programs__inner">
+          <div class="programs__inner section__slider">
 
-            <h2 class="programs__title title title--md title--colored">Программы</h2>
-            <div class="swiper">
+            <h2 class="programs__title section__slider-title title title--md title--colored title--slider">Программы</h2>
+
+            <div class="programs__swiper section__slider-swiper swiper">
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
@@ -99,6 +100,7 @@
                     </div>
                   </article>
                 </div>
+
                 <div class="swiper-slide">
                   <article class="program-card">
                     <div class="program-card__image">
@@ -118,7 +120,7 @@
                       <p>Помогайте другим и развивайте свои лидерские качества.</p>
                       <a class="program-card__link button button--light button--no-border" href="#">
                         <span class="visually-hidden">Подробнее о программе</span>
-                        <span class="button__icon">
+                        <span class="button__icon button__icon--small">
                           <svg width="8" height="8">
                             <use href="/__spritemap#sprite-arrow"></use>
                           </svg>
@@ -127,6 +129,7 @@
                     </div>
                   </article>
                 </div>
+
                 <div class="swiper-slide">
                   <article class="program-card">
                     <div class="program-card__image">
@@ -146,7 +149,7 @@
                       <p>Получите образование и измените своё будущее.</p>
                       <a class="program-card__link button button--light button--no-border" href="#">
                         <span class="visually-hidden">Подробнее о программе</span>
-                        <span class="button__icon">
+                        <span class="button__icon button__icon--small">
                           <svg width="8" height="8">
                             <use href="/__spritemap#sprite-arrow"></use>
                           </svg>
@@ -155,6 +158,7 @@
                     </div>
                   </article>
                 </div>
+
                 <div class="swiper-slide">
                   <article class="program-card">
                     <div class="program-card__image">
@@ -174,7 +178,7 @@
                       <p>Исследуйте веру и углубляйте понимание себя и окружающего мира.</p>
                       <a class="program-card__link button button--light button--no-border" href="#">
                         <span class="visually-hidden">Подробнее о программе</span>
-                        <span class="button__icon">
+                        <span class="button__icon button__icon--small">
                           <svg width="8" height="8">
                             <use href="/__spritemap#sprite-arrow"></use>
                           </svg>
@@ -184,15 +188,20 @@
                   </article>
                 </div>
               </div>
+            </div>
 
+            <div class="programs__navigation section__slider-navigation">
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="section__slider-button section__slider-button--prev swiper-button-prev"></div>
+              <div class="section__slider-button section__slider-button--next swiper-button-next"></div>
+            </div>
 
+            <div class="programs__scrollbar section__slider-scrollbar">
               <!-- If we need scrollbar -->
               <div class="swiper-scrollbar"></div>
             </div>
-            <a class="programs__link button button--text button--light" href="#">
+
+            <a class="programs__link section__slider-link button button--text button--light" href="#">
               <span>Все программы</span>
               <span class="button__icon">
                 <svg width="8" height="8">
