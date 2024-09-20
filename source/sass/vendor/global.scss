@@ -1,4 +1,17 @@
 :root {
+  --swiper-theme-color: #316dc2; // rgb(49, 109, 194)
+  --swiper-scrollbar-border-radius: 0px;
+  --swiper-scrollbar-top: 0px;
+  --swiper-scrollbar-bottom: 0px;
+  --swiper-scrollbar-left: 0px;
+  --swiper-scrollbar-right: 0px;
+  --swiper-scrollbar-sides-offset: 0px;
+  --swiper-scrollbar-bg-color: rgba(49, 109, 194, 0.2);
+  --swiper-scrollbar-drag-bg-color: var(--swiper-theme-color);
+  --swiper-scrollbar-size: 2px;
+}
+
+:root {
   --padding-offset: 15px;
 
   @include viewport-tablet {

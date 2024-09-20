@@ -1,13 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-
-import 'swiper/css';
-// import 'swiper/css/bundle';
-// import 'swiper/css/navigation';
-// import 'swiper/css/scrollbar';
+import { Navigation, Scrollbar } from 'swiper/modules';
 
 const swiperPrograms = new Swiper('.swiper', {
-  modules: [ Navigation ],
+  modules: [ Navigation, Scrollbar ],
   navigation: {
     nextEl: '.programs__navigation .swiper-button-next',
     prevEl: '.programs__navigation .swiper-button-prev',
@@ -15,6 +10,9 @@ const swiperPrograms = new Swiper('.swiper', {
   },
   scrollbar: {
     el: '.programs__scrollbar .swiper-scrollbar',
+    // el: '.swiper-scrollbar',
+    // dragClass: '.swiper-scrollbar-drag',
+    // horizontalClass: '.swiper-scrollbar-horizontal'
   },
   slidesPerView: 1,
   spaceBetween: 15,
