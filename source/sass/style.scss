@@ -1,3 +1,11 @@
+// Swiper
+// ---------------------------------
+
+// import 'swiper/css/bundle';
+// import 'swiper/css/navigation';
+@import "swiper/css";
+@import "swiper/css/scrollbar";
+
 // Vendor
 // ---------------------------------
 
@@ -16,3 +24,5 @@
 @import "block/button";
 @import "block/list";
 @import "block/about";
+@import "block/programs";
+@import "block/program-card";

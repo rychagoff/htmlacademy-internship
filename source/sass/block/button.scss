@@ -1,6 +1,7 @@
 .button {
   display: inline-flex;
   align-items: center;
+  justify-self: flex-start;
   padding: 4px;
   border: 1px solid $accent-color;
   border-radius: 30px;
@@ -36,6 +37,11 @@
   &--light svg {
     color: $white-color;
   }
+
+  &--no-border {
+    padding: 0;
+    border: 0;
+  }
 }
 
 .button__icon {
@@ -46,6 +52,10 @@
 
   @include viewport-tablet {
     padding: 19px;
+  }
+
+  &--small {
+    padding: 11px;
   }
 }
 
