@@ -15,10 +15,18 @@
 .program-card__title {
   flex-basis: 100%;
   margin-bottom: 18px;
+
+  @include viewport-tablet {
+    font-size: 20px;
+    line-height: 14px;
+  }
 }
 
 .program-card__image img {
   display: block;
+  width: 100%;
+  height: revert-layer;
+  object-fit: cover;
 }
 
 .program-card__content {
@@ -28,22 +36,33 @@
   left: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 16px;
   padding: 18px 18px 15px;
   background-color: $white-color;
   border-radius: 12px;
-
-  // clip-path: polygon(0 42px, 0 12px, 0 12px, 0.12px 9.72px, 0.48px 7.68px, 1.08px 5.88px, 1.92px 4.32px, 3px 3px, 4.32px 1.92px, 5.88px 1.08px, 7.68px 0.48px, 9.72px 0.12px, 12px 0, calc(100% - 130px) 0, calc(100% - 130px) 0, calc(100% - 127.72px) 0.12px, calc(100% - 125.68px) 0.48px, calc(100% - 123.88px) 1.08px, calc(100% - 122.32px) 1.92px, calc(100% - 121px) 3px, calc(100% - 119.92px) 4.32px, calc(100% - 119.08px) 5.88px, calc(100% - 118.48px) 7.68px, calc(100% - 118.12px) 9.72px, calc(100% - 118px) 12px, calc(100% - 118px) 30px, calc(100% - 118px) 30px, calc(100% - 117.88px) 32.28px, calc(100% - 117.52px) 34.32px, calc(100% - 116.92px) 36.12px, calc(100% - 116.08px) 37.68px, calc(100% - 115px) 39px, calc(100% - 113.68px) 40.08px, calc(100% - 112.12px) 40.92px, calc(100% - 110.32px) 41.52px, calc(100% - 108.28px) 41.88px, calc(100% - 106px) 42px, calc(100% - 12px) 42px, calc(100% - 12px) 42px, calc(100% - 9.72px) 42.12px, calc(100% - 7.68px) 42.48px, calc(100% - 5.88px) 43.08px, calc(100% - 4.32px) 43.92px, calc(100% - 3px) 45px, calc(100% - 1.92px) 46.32px, calc(100% - 1.08px) 47.88px, calc(100% - 0.48px) 49.68px, calc(100% - 0.12px) 51.72px, calc(100% - 0px) 54px, calc(100% - 0px) calc(100% - 12px), calc(100% - 0px) calc(100% - 12px), calc(100% - 0.12px) calc(100% - 9.72px), calc(100% - 0.48px) calc(100% - 7.68px), calc(100% - 1.08px) calc(100% - 5.88px), calc(100% - 1.92px) calc(100% - 4.32px), calc(100% - 3px) calc(100% - 3px), calc(100% - 4.32px) calc(100% - 1.92px), calc(100% - 5.88px) calc(100% - 1.08px), calc(100% - 7.68px) calc(100% - 0.48px), calc(100% - 9.72px) calc(100% - 0.12px), calc(100% - 12px) calc(100% - 0px), 12px calc(100% - 0px), 12px calc(100% - 0px), 9.72px calc(100% - 0.12px), 7.68px calc(100% - 0.48px), 5.88px calc(100% - 1.08px), 4.32px calc(100% - 1.92px), 3px calc(100% - 3px), 1.92px calc(100% - 4.32px), 1.08px calc(100% - 5.88px), 0.48px calc(100% - 7.68px), 0.12px calc(100% - 9.72px), 0 calc(100% - 12px), 0 42px);
-
   clip-path: polygon(0 42px, 0 12px, 0 12px, 0.12px 9.72px, 0.48px 7.68px, 1.08px 5.88px, 1.92px 4.32px, 3px 3px, 4.32px 1.92px, 5.88px 1.08px, 7.68px 0.48px, 9.72px 0.12px, 12px 0, 134px 0, 134px 0, 136.28px 0.12px, 138.32px 0.48px, 140.12px 1.08px, 141.68px 1.92px, 143px 3px, 144.08px 4.32px, 144.92px 5.88px, 145.52px 7.68px, 145.88px 9.72px, 146px 12px, 146px 24px, 146px 24px, 146.18px 27.42px, 146.72px 30.48px, 147.62px 33.18px, 148.88px 35.52px, 150.5px 37.5px, 152.48px 39.12px, 154.82px 40.38px, 157.52px 41.28px, 160.58px 41.82px, 164px 42px, calc(100% - 12px) 42px, calc(100% - 12px) 42px, calc(100% - 9.72px) 42.12px, calc(100% - 7.68px) 42.48px, calc(100% - 5.88px) 43.08px, calc(100% - 4.32px) 43.92px, calc(100% - 3px) 45px, calc(100% - 1.92px) 46.32px, calc(100% - 1.08px) 47.88px, calc(100% - 0.48px) 49.68px, calc(100% - 0.12px) 51.72px, calc(100% - 0px) 54px, calc(100% - 0px) calc(100% - 12px), calc(100% - 0px) calc(100% - 12px), calc(100% - 0.12px) calc(100% - 9.72px), calc(100% - 0.48px) calc(100% - 7.68px), calc(100% - 1.08px) calc(100% - 5.88px), calc(100% - 1.92px) calc(100% - 4.32px), calc(100% - 3px) calc(100% - 3px), calc(100% - 4.32px) calc(100% - 1.92px), calc(100% - 5.88px) calc(100% - 1.08px), calc(100% - 7.68px) calc(100% - 0.48px), calc(100% - 9.72px) calc(100% - 0.12px), calc(100% - 12px) calc(100% - 0px), 12px calc(100% - 0px), 12px calc(100% - 0px), 9.72px calc(100% - 0.12px), 7.68px calc(100% - 0.48px), 5.88px calc(100% - 1.08px), 4.32px calc(100% - 1.92px), 3px calc(100% - 3px), 1.92px calc(100% - 4.32px), 1.08px calc(100% - 5.88px), 0.48px calc(100% - 7.68px), 0.12px calc(100% - 9.72px), 0 calc(100% - 12px), 0 42px);
+
+  @include viewport-tablet {
+    right: 20px;
+    bottom: 10px;
+    left: 20px;
+    clip-path: polygon(0 42px, 0 12px, 0 12px, 0.12px 9.72px, 0.48px 7.68px, 1.08px 5.88px, 1.92px 4.32px, 3px 3px, 4.32px 1.92px, 5.88px 1.08px, 7.68px 0.48px, 9.72px 0.12px, 12px 0, calc(100% - 123px) 0, calc(100% - 123px) 0, calc(100% - 120.72px) 0.12px, calc(100% - 118.68px) 0.48px, calc(100% - 116.88px) 1.08px, calc(100% - 115.32px) 1.92px, calc(100% - 114px) 3px, calc(100% - 112.92px) 4.32px, calc(100% - 112.08px) 5.88px, calc(100% - 111.48px) 7.68px, calc(100% - 111.12px) 9.72px, calc(100% - 111px) 12px, calc(100% - 111px) 20px, calc(100% - 111px) 20px, calc(100% - 110.82px) 23.42px, calc(100% - 110.28px) 26.48px, calc(100% - 109.38px) 29.18px, calc(100% - 108.12px) 31.52px, calc(100% - 106.5px) 33.5px, calc(100% - 104.52px) 35.12px, calc(100% - 102.18px) 36.38px, calc(100% - 99.48px) 37.28px, calc(100% - 96.42px) 37.82px, calc(100% - 93px) 38px, calc(100% - 12px) 38px, calc(100% - 12px) 38px, calc(100% - 9.72px) 38.12px, calc(100% - 7.68px) 38.48px, calc(100% - 5.88px) 39.08px, calc(100% - 4.32px) 39.92px, calc(100% - 3px) 41px, calc(100% - 1.92px) 42.32px, calc(100% - 1.08px) 43.88px, calc(100% - 0.48px) 45.68px, calc(100% - 0.12px) 47.72px, calc(100% - 0px) 50px, calc(100% - 0px) calc(100% - 12px), calc(100% - 0px) calc(100% - 12px), calc(100% - 0.12px) calc(100% - 9.72px), calc(100% - 0.48px) calc(100% - 7.68px), calc(100% - 1.08px) calc(100% - 5.88px), calc(100% - 1.92px) calc(100% - 4.32px), calc(100% - 3px) calc(100% - 3px), calc(100% - 4.32px) calc(100% - 1.92px), calc(100% - 5.88px) calc(100% - 1.08px), calc(100% - 7.68px) calc(100% - 0.48px), calc(100% - 9.72px) calc(100% - 0.12px), calc(100% - 12px) calc(100% - 0px), 12px calc(100% - 0px), 12px calc(100% - 0px), 9.72px calc(100% - 0.12px), 7.68px calc(100% - 0.48px), 5.88px calc(100% - 1.08px), 4.32px calc(100% - 1.92px), 3px calc(100% - 3px), 1.92px calc(100% - 4.32px), 1.08px calc(100% - 5.88px), 0.48px calc(100% - 7.68px), 0.12px calc(100% - 9.72px), 0 calc(100% - 12px), 0 42px);
+  }
 }
 
 .program-card__content p {
-  max-width: 188px;
+  flex: 1 0 188px;
   margin: 0;
   font-size: 12px;
   line-height: 14px;
+
+  @include viewport-tablet {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .program-card__link {
-  margin-left: auto;
+  flex: 0 0 auto;
 }

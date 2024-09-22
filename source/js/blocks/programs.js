@@ -2,6 +2,7 @@ import Swiper from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 
 const swiperPrograms = new Swiper('.swiper', {
+  init: false,
   modules: [ Navigation, Scrollbar ],
   navigation: {
     nextEl: '.programs__navigation .swiper-button-next',
@@ -10,10 +11,10 @@ const swiperPrograms = new Swiper('.swiper', {
   },
   scrollbar: {
     el: '.programs__scrollbar .swiper-scrollbar',
-    // el: '.swiper-scrollbar',
-    // dragClass: '.swiper-scrollbar-drag',
-    // horizontalClass: '.swiper-scrollbar-horizontal'
+    draggable: true,
+    hide: false
   },
+  allowTouchMove: false,
   slidesPerView: 1,
   spaceBetween: 15,
   breakpoints: {
@@ -32,7 +33,8 @@ const swiperPrograms = new Swiper('.swiper', {
       slidesPerView: 3,
       spaceBetween: 32
     }
-  }
+  },
 });
 
+// init Swiper
 swiperPrograms.init();
