@@ -28,17 +28,38 @@
     background-color: $accent-color;
   }
 
+  &--advantages .list__item p {
+    font-weight: 300;
+  }
+
   &--grant {
+    counter-reset: item;
     display: grid;
     gap: 15px;
+    list-style: none;
   }
 
   &--grant .list__item {
+    counter-increment: item;
+    margin-left: 15px;
     padding: 24px 25px;
   }
 
-  &--grant .list__item p {
-    font-weight: 400;
+  &--grant .list__item::before {
+    content: counter(item);
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    background-color: $accent-color;
+    border-radius: 30px;
   }
 }
 
@@ -76,7 +97,6 @@
 
 .list__item p {
   margin: 0;
-  font-weight: 300;
   color: $grey-color;
 
   @include viewport-tablet {
