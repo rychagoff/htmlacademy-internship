@@ -35,14 +35,32 @@
   &--grant {
     counter-reset: item;
     display: grid;
-    gap: 15px;
+    gap: 10px;
     list-style: none;
+
+    @include viewport-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 28px;
+      row-gap: 10px;
+    }
+
+    @include viewport-desktop {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
   }
 
   &--grant .list__item {
     counter-increment: item;
+    margin-top: 5px;
     margin-left: 15px;
     padding: 24px 25px;
+
+    @include viewport-tablet {
+      margin-top: 15px;
+      margin-left: 20px;
+      padding: 30px 25px;
+    }
   }
 
   &--grant .list__item::before {
@@ -60,6 +78,22 @@
     font-weight: 500;
     background-color: $accent-color;
     border-radius: 30px;
+
+    @include viewport-tablet {
+      top: -15px;
+      left: -20px;
+      width: 42px;
+      height: 42px;
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: calc(1em / 100);
+    }
+  }
+
+  &--grant .list__item p {
+    @include viewport-desktop {
+      line-height: 26px;
+    }
   }
 }
 
