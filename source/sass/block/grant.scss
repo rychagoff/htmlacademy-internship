@@ -2,3 +2,25 @@
   color: $white-color;
   background-color: $accent-color;
 }
+
+.grant__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.grant__title {
+  margin-bottom: 15px;
+}
+
+.grant__col {
+  &--left p {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &--right h3 {
+    margin-bottom: 20px;
+    padding: 10px 0;
+  }
+}

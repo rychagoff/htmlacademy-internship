@@ -28,6 +28,15 @@
     background-color: $accent-color;
   }
 
+  &--grant {
+    display: grid;
+    gap: 15px;
+  }
+
+  &--grant .list__item {
+    padding: 24px 25px;
+  }
+
   &--grant .list__item p {
     font-weight: 400;
   }
