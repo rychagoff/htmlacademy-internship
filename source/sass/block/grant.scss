@@ -1,4 +1,5 @@
 .grant {
+  padding: 70px 0;
   color: $white-color;
   background-color: $accent-color;
 
@@ -41,6 +42,7 @@
     color: $grey-color;
 
     @include viewport-tablet {
+      max-width: 500px;
       margin-bottom: 40px;
       font-size: 16px;
     }

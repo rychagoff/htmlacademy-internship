@@ -1,3 +1,9 @@
+.programs__title {
+  @include viewport-desktop {
+    padding: 5px 0;
+  }
+}
+
 .programs__link span:not(.button__icon) {
   margin-left: 26px;
   margin-right: 30px;

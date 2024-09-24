@@ -15,10 +15,17 @@
 .program-card__title {
   flex-basis: 100%;
   margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 18px;
 
   @include viewport-tablet {
     font-size: 20px;
     line-height: 14px;
+  }
+
+  @include viewport-desktop {
+    font-size: 24px;
+    line-height: 17px;
   }
 }
 
@@ -49,6 +56,12 @@
     left: 20px;
     clip-path: polygon(0 42px, 0 12px, 0 12px, 0.12px 9.72px, 0.48px 7.68px, 1.08px 5.88px, 1.92px 4.32px, 3px 3px, 4.32px 1.92px, 5.88px 1.08px, 7.68px 0.48px, 9.72px 0.12px, 12px 0, calc(100% - 123px) 0, calc(100% - 123px) 0, calc(100% - 120.72px) 0.12px, calc(100% - 118.68px) 0.48px, calc(100% - 116.88px) 1.08px, calc(100% - 115.32px) 1.92px, calc(100% - 114px) 3px, calc(100% - 112.92px) 4.32px, calc(100% - 112.08px) 5.88px, calc(100% - 111.48px) 7.68px, calc(100% - 111.12px) 9.72px, calc(100% - 111px) 12px, calc(100% - 111px) 20px, calc(100% - 111px) 20px, calc(100% - 110.82px) 23.42px, calc(100% - 110.28px) 26.48px, calc(100% - 109.38px) 29.18px, calc(100% - 108.12px) 31.52px, calc(100% - 106.5px) 33.5px, calc(100% - 104.52px) 35.12px, calc(100% - 102.18px) 36.38px, calc(100% - 99.48px) 37.28px, calc(100% - 96.42px) 37.82px, calc(100% - 93px) 38px, calc(100% - 12px) 38px, calc(100% - 12px) 38px, calc(100% - 9.72px) 38.12px, calc(100% - 7.68px) 38.48px, calc(100% - 5.88px) 39.08px, calc(100% - 4.32px) 39.92px, calc(100% - 3px) 41px, calc(100% - 1.92px) 42.32px, calc(100% - 1.08px) 43.88px, calc(100% - 0.48px) 45.68px, calc(100% - 0.12px) 47.72px, calc(100% - 0px) 50px, calc(100% - 0px) calc(100% - 12px), calc(100% - 0px) calc(100% - 12px), calc(100% - 0.12px) calc(100% - 9.72px), calc(100% - 0.48px) calc(100% - 7.68px), calc(100% - 1.08px) calc(100% - 5.88px), calc(100% - 1.92px) calc(100% - 4.32px), calc(100% - 3px) calc(100% - 3px), calc(100% - 4.32px) calc(100% - 1.92px), calc(100% - 5.88px) calc(100% - 1.08px), calc(100% - 7.68px) calc(100% - 0.48px), calc(100% - 9.72px) calc(100% - 0.12px), calc(100% - 12px) calc(100% - 0px), 12px calc(100% - 0px), 12px calc(100% - 0px), 9.72px calc(100% - 0.12px), 7.68px calc(100% - 0.48px), 5.88px calc(100% - 1.08px), 4.32px calc(100% - 1.92px), 3px calc(100% - 3px), 1.92px calc(100% - 4.32px), 1.08px calc(100% - 5.88px), 0.48px calc(100% - 7.68px), 0.12px calc(100% - 9.72px), 0 calc(100% - 12px), 0 42px);
   }
+
+  @include viewport-desktop {
+    right: 51px;
+    bottom: 17px;
+    min-height: 123px;
+  }
 }
 
 .program-card__content p {
@@ -58,11 +71,22 @@
   line-height: 14px;
 
   @include viewport-tablet {
+    flex: 1 0 202px;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  @include viewport-desktop {
+    align-content: center;
+    min-height: 54px;
+    line-height: 18px;
   }
 }
 
 .program-card__link {
   flex: 0 0 auto;
+
+  // @include viewport-desktop {
+  //   align-items: start;
+  // }
 }
