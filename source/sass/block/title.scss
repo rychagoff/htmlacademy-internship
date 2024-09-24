@@ -21,7 +21,17 @@
   }
 
   &--sm {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include viewport-tablet {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include viewport-desktop {
+      font-size: 32px;
+      line-height: 36px;
+    }
   }
 }

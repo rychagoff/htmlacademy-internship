@@ -21,7 +21,9 @@
 }
 
 .about__header {
-  margin-right: 40px;
+  @include viewport-tablet {
+    margin-right: 40px;
+  }
 
   @include viewport-desktop {
     margin-right: 0;
