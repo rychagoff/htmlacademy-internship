@@ -1,10 +1,30 @@
 .contacts {
+  padding: 70px 0;
   color: $white-color;
   background-color: $accent-color;
 }
 
+.contacts__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+  padding: 5px 0;
+}
+
 .contacts__address {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 30px;
   font-style: normal;
+  border-bottom: 2px solid rgba($white-color, 0.2);
+}
+
+.contacts__address p {
+  margin: 0;
 }
 
 .contacts__address a {
@@ -13,10 +33,21 @@
 }
 
 .contacts__label {
+  display: block;
+  margin-bottom: 15px;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: calc(1em / 100);
   color: $grey-color;
   text-transform: uppercase;
   opacity: 0.8;
+}
+
+.contacts__image {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.contacts__image img {
+  display: block;
 }
