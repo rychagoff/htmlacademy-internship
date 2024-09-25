@@ -1,0 +1,22 @@
+.contacts {
+  color: $white-color;
+  background-color: $accent-color;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__address a {
+  color: $white-color;
+  text-decoration: none;
+}
+
+.contacts__label {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: calc(1em / 100);
+  color: $grey-color;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
