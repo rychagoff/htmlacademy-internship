@@ -1,0 +1,22 @@
+.form {
+  color: $white-color;
+}
+
+.form__inner {
+  background-color: $accent-color;
+}
+
+.form__title {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.form__description {
+  color: $grey-color;
+}
+
+.form__label span {
+  font-size: 12px;
+  line-height: 14px;
+  color: $grey-color;
+}

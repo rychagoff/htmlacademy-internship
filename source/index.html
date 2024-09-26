@@ -306,33 +306,36 @@
               <div class="form__group">
                 <label class="form__label">
                   <span>Имя</span>
-                  <input type="text" name="name" required>
+                  <input class="input input--text" type="text" name="name" required>
                 </label>
               </div>
               <div class="form__group">
                 <label class="form__label">
                   <span>Телефон</span>
-                  <input type="tel" name="phone" maxlength="21" required>
+                  <input class="input input--text" type="tel" name="phone" maxlength="21" required>
                 </label>
               </div>
               <div class="form__group">
                 <label class="form__label">
                   <span>Ваше сообщение</span>
-                  <textarea name="message"></textarea>
+                  <textarea class="input input--text" name="message"></textarea>
                 </label>
               </div>
               <div class="form__group">
-                <select name="city" id="city-select">
-                  <option value=""></option>
-                  <option value="petersburg">Санкт-Петербург</option>
-                  <option value="samara">Самара</option>
-                  <option value="perm">Пермь</option>
-                  <option value="novosibirsk">Новосибирск</option>
-                </select>
+                <label class="form__label">
+                  <span>Выберите город</span>
+                  <select class="input" name="city" id="city-select">
+                    <option value=""></option>
+                    <option value="petersburg">Санкт-Петербург</option>
+                    <option value="samara">Самара</option>
+                    <option value="perm">Пермь</option>
+                    <option value="novosibirsk">Новосибирск</option>
+                  </select>
+                </label>
               </div>
               <div class="form__group">
                 <label class="form__label">
-                  <input type="checkbox" name="agreement" value="1" required="">
+                  <input class="input input--text" type="checkbox" name="agreement" value="1" required="">
                   <span>Я согласен на обработку моих персональных данных</span>
                 </label>
               </div>
