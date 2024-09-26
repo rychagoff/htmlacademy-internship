@@ -296,6 +296,60 @@
         </div>
       </section>
 
+      <div class="section form" data-test="form">
+        <div class="container">
+          <div class="form__inner">
+
+            <h2 class="form__title title title--md">Напишите нам</h2>
+            <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <form class="form__feedback" action="#" method="post" target="_blank">
+              <div class="form__group">
+                <label class="form__label">
+                  <span>Имя</span>
+                  <input type="text" name="name" required>
+                </label>
+              </div>
+              <div class="form__group">
+                <label class="form__label">
+                  <span>Телефон</span>
+                  <input type="tel" name="phone" maxlength="21" required>
+                </label>
+              </div>
+              <div class="form__group">
+                <label class="form__label">
+                  <span>Ваше сообщение</span>
+                  <textarea name="message"></textarea>
+                </label>
+              </div>
+              <div class="form__group">
+                <select name="city" id="city-select">
+                  <option value=""></option>
+                  <option value="petersburg">Санкт-Петербург</option>
+                  <option value="samara">Самара</option>
+                  <option value="perm">Пермь</option>
+                  <option value="novosibirsk">Новосибирск</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label class="form__label">
+                  <input type="checkbox" name="agreement" value="1" required="">
+                  <span>Я согласен на обработку моих персональных данных</span>
+                </label>
+              </div>
+              <button class="button button--text button--icon button--light" type="submit">
+                <span>Отправить</span>
+                <span class="button__icon">
+                  <svg width="8" height="8">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
     </main>
 
     <!-- пример использования спрайта -->
@@ -309,7 +363,6 @@
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
 
     <script type="module" src="js/main.js"></script>
