@@ -1,0 +1,13 @@
+.mark {
+  position: relative;
+
+  &--checkbox::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: $white-color;
+    border-radius: 2px;
+  }
+}
