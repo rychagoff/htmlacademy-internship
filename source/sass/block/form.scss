@@ -24,16 +24,55 @@
   @include viewport-tablet {
     padding: 0 58px;
   }
+
+  @include viewport-desktop {
+    padding: 0 100px;
+  }
 }
 
 .form__inner {
+  border-radius: 16px;
+
+  @include viewport-tablet {
+    background-image:
+      image-set(
+        url("../../img/form/form-bg-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/form/form-bg-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/form/form-bg-tablet@2x.jpg") type("image/jpg") 2x,
+        url("../../img/form/form-bg-tablet@1x.jpg") type("image/jpg") 1x
+      );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include viewport-desktop {
+    background-image:
+      image-set(
+        url("../../img/form/form-bg-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/form/form-bg-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/form/form-bg-desktop@2x.jpg") type("image/jpg") 2x,
+        url("../../img/form/form-bg-desktop@1x.jpg") type("image/jpg") 1x
+      );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.form__wrapper {
   padding: 15px;
   background-color: $accent-color;
   border-radius: 16px;
 
   @include viewport-tablet {
     max-width: 442px;
-    padding: 30px 40px 36px;
+    padding: 30px 40px;
+  }
+
+  @include viewport-desktop {
+    max-width: 490px;
+    padding: 30px 70px;
   }
 }
 
@@ -48,6 +87,12 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @include viewport-desktop {
+    padding: 14px 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 .form__description {
@@ -58,6 +103,10 @@
   @include viewport-tablet {
     margin-bottom: 40px;
     font-size: 16px;
+  }
+
+  @include viewport-desktop {
+    line-height: 26px;
   }
 }
 
@@ -107,6 +156,10 @@
     font-size: 14px;
     line-height: 20px;
   }
+
+  @include viewport-desktop {
+    line-height: 18px;
+  }
 }
 
 .form__label--agreement span {
@@ -121,4 +174,14 @@
 
 .form__button {
   margin-right: 10px;
+
+  @include viewport-tablet {
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+
+  @include viewport-desktop {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
