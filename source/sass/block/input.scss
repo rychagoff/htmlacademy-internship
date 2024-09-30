@@ -1,0 +1,33 @@
+.input {
+  width: 100%;
+  min-height: 50px;
+
+  padding: 14px 24px;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: transparent;
+  border-radius: 8px;
+
+  &--lighten {
+    color: $grey-color;
+    border: 1px solid rgba($white-color, 0.3);
+  }
+
+  &--darken {
+    border: 1px solid rgba($grey-color, 0.3);
+  }
+
+  &--textarea {
+    min-height: 94px;
+    resize: none;
+  }
+
+  &--select {
+    appearance: none;
+    padding-right: 56px;
+  }
+
+  &--select option {
+    color: $text-color;
+  }
+}

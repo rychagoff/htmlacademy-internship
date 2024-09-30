@@ -1,0 +1,19 @@
+.mark {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    position: relative;
+    flex: 0 0 20px;
+    height: 20px;
+  }
+
+  &--checkbox::before {
+    background-color: $white-color;
+    border-radius: 2px;
+  }
+}

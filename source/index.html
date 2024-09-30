@@ -296,6 +296,69 @@
         </div>
       </section>
 
+      <section class="section form" data-test="form">
+        <div class="container">
+          <div class="form__inner">
+
+            <div class="form__wrapper">
+              <h2 class="form__title title title--md">Напишите нам</h2>
+              <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+              <form class="form__feedback" action="#" method="post" target="_blank">
+                <div class="form__group">
+                  <label class="form__label">
+                    <span>Имя</span>
+                    <input class="input input--lighten input--text" type="text" name="name" required>
+                  </label>
+                </div>
+                <div class="form__group">
+                  <label class="form__label">
+                    <span>Телефон</span>
+                    <input class="input input--lighten input--text" type="tel" name="phone" maxlength="21" required>
+                  </label>
+                </div>
+                <div class="form__group">
+                  <label class="form__label">
+                    <span>Ваше сообщение</span>
+                    <textarea class="input input--lighten input--textarea" name="message" autocomplete="off" required></textarea>
+                  </label>
+                </div>
+                <div class="form__group">
+                  <label class="form__label">
+                    <span>Выберите город</span>
+                    <div class="form__label-wrapper">
+                      <select class="input input--lighten input--select" name="city" required>
+                        <option value="" disabled selected></option>
+                        <option value="petersburg">Санкт-Петербург</option>
+                        <option value="samara">Самара</option>
+                        <option value="perm">Пермь</option>
+                        <option value="novosibirsk">Новосибирск</option>
+                      </select>
+                    </div>
+                  </label>
+                </div>
+                <div class="form__group">
+                  <label class="form__label form__label--agreement">
+                    <input class="visually-hidden" type="checkbox" name="agreement" value="1" required="">
+                    <span class="mark mark--checkbox">
+                      <span>Я согласен на обработку моих персональных<span class="custom-br"></span> данных</span>
+                    </span>
+                  </label>
+                </div>
+                <button class="form__button button button--text button--icon button--light" type="submit">
+                  <span>Отправить</span>
+                  <span class="button__icon">
+                    <svg width="8" height="8">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <!-- пример использования спрайта -->
@@ -309,7 +372,6 @@
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
 
     <script type="module" src="js/main.js"></script>
