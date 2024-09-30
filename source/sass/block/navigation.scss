@@ -1,0 +1,8 @@
+.navigation__list {
+  @include reset-list;
+}
+
+.navigation__link {
+  color: $text-color;
+  text-decoration: none;
+}

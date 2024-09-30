@@ -1,0 +1,38 @@
+.social-list {
+  @include reset-list;
+}
+
+.social-links__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background-color: $accent-color;
+  border-radius: 100%;
+
+  &--vk {
+    --bgi: url("/__spritemap#sprite-vk-view");
+  }
+
+  &--ok {
+    --bgi: url("/__spritemap#sprite-ok-view");
+  }
+
+  &--reddit {
+    --bgi: url("/__spritemap#sprite-reddit-view");
+  }
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: $white-color;
+    mask-image: var(--bgi);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+}
