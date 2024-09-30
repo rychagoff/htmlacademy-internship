@@ -11,6 +11,11 @@
   background-color: $accent-color;
   border-radius: 100%;
 
+  @include viewport-tablet {
+    width: 36px;
+    height: 36px;
+  }
+
   &--vk {
     --bgi: url("/__spritemap#sprite-vk-view");
   }
@@ -34,5 +39,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
+
+    @include viewport-tablet {
+      width: 16px;
+      height: 16px;
+    }
   }
 }

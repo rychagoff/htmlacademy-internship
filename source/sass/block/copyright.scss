@@ -2,8 +2,21 @@
   font-size: 12px;
   line-height: 14px;
   color: $text-color;
+
+  @include viewport-tablet {
+    line-height: 12px;
+  }
+
+  @include viewport-desktop {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .copyright span {
   opacity: 0.6;
+
+  @include viewport-desktop {
+    opacity: 1;
+  }
 }
