@@ -11,28 +11,54 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include viewport-tablet {
+    margin: 0;
+    background-image: none;
+  }
 }
 
 .form .container {
   padding: 0 10px;
+
+  @include viewport-tablet {
+    padding: 0 58px;
+  }
 }
 
 .form__inner {
   padding: 15px;
   background-color: $accent-color;
   border-radius: 16px;
+
+  @include viewport-tablet {
+    max-width: 442px;
+    padding: 30px 40px 36px;
+  }
 }
 
 .form__title {
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 22px;
+
+  @include viewport-tablet {
+    margin-bottom: 20px;
+    padding: 11px 0;
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .form__description {
   margin: 0;
   margin-bottom: 20px;
   color: $grey-color;
+
+  @include viewport-tablet {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
 }
 
 .form__feedback {
@@ -44,6 +70,10 @@
 .form__label-wrapper {
   position: relative;
   padding-right: 10px;
+
+  @include viewport-tablet {
+    padding-right: 0;
+  }
 
   &::after {
     content: "";
@@ -72,11 +102,21 @@
   line-height: 14px;
   color: $grey-color;
   opacity: 0.8;
+
+  @include viewport-tablet {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .form__label--agreement span {
   color: $white-color;
   opacity: 1;
+
+  @include viewport-tablet {
+    font-size: 12px;
+    line-height: 12px;
+  }
 }
 
 .form__button {
