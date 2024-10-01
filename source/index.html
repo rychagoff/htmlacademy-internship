@@ -316,29 +316,29 @@
                     <input class="input input--lighten input--text" type="tel" name="phone" maxlength="21" required>
                   </label>
                 </div>
-                <div class="form__group">
-                  <label class="form__label">
+                <div class="form__group form__group--textarea">
+                  <label class="form__label" for="textarea">
                     <span>Ваше сообщение</span>
-                    <textarea class="input input--lighten input--textarea" name="message" autocomplete="off" required></textarea>
                   </label>
+                  <textarea class="input input--lighten input--textarea" name="message" autocomplete="off" id="textarea" required></textarea>
                 </div>
-                <div class="form__group">
-                  <label class="form__label">
+                <div class="form__group form__group--select">
+                  <label class="form__label" for="city-select">
                     <span>Выберите город</span>
-                    <div class="form__label-wrapper">
-                      <select class="input input--lighten input--select" name="city" required>
-                        <option value="" disabled selected></option>
-                        <option value="petersburg">Санкт-Петербург</option>
-                        <option value="samara">Самара</option>
-                        <option value="perm">Пермь</option>
-                        <option value="novosibirsk">Новосибирск</option>
-                      </select>
-                    </div>
                   </label>
+                  <div class="form__label-wrapper">
+                    <select class="input input--lighten input--select" name="city" id="city-select" required>
+                      <option value="" label=" "></option>
+                      <option value="petersburg" label="Санкт-Петербург">Санкт-Петербург</option>
+                      <option value="samara" label="Самара">Самара</option>
+                      <option value="perm" label="Пермь">Пермь</option>
+                      <option value="novosibirsk" label="Новосибирск">Новосибирск</option>
+                     </select>
+                  </div>
                 </div>
                 <div class="form__group">
                   <label class="form__label form__label--agreement">
-                    <input class="visually-hidden" type="checkbox" name="agreement" value="1" required="">
+                    <input class="visually-hidden" type="checkbox" name="agreement" value="1" required>
                     <span class="mark mark--checkbox">
                       <span>Я согласен на обработку моих персональных<span class="custom-br"></span> данных</span>
                     </span>
@@ -395,18 +395,18 @@
               <span>Стажировка © 2023 Все права защищены</span>
             </div>
             <ul class="footer__social social-list">
-              <li class="social-links__item">
-                <a class="social-links__link social-links__link--vk" href="#">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--vk" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
-              <li class="social-links__item">
-                <a class="social-links__link social-links__link--ok" href="#">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--ok" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Одноклассники</span>
                 </a>
               </li>
-              <li class="social-links__item">
-                <a class="social-links__link social-links__link--reddit" href="#">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--reddit" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Reddit</span>
                 </a>
               </li>

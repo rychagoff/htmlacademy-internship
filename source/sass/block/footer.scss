@@ -7,23 +7,12 @@
 }
 
 .footer__inner {
-  // display: grid;
-  // grid-template-areas:
-  //   "logo"
-  //   "navigation"
-  //   "copyright"
-  //   "social";
-  // justify-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 
   @include viewport-tablet {
-    // grid-template-areas:
-    //   "logo      navigation"
-    //   "copyright social";
-    // justify-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -59,13 +48,13 @@
 .footer__copyright {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   margin-bottom: 5px;
-  text-align: center;
 
   @include viewport-tablet {
+    align-items: flex-start;
     margin-bottom: 0;
-    text-align: left;
   }
 
   @include viewport-desktop {

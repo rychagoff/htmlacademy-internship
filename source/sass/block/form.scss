@@ -116,9 +116,17 @@
   gap: 20px;
 }
 
+.form__group {
+  &--select,
+  &--textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 .form__label-wrapper {
   position: relative;
-  padding-right: 10px;
 
   @include viewport-tablet {
     padding-right: 0;
