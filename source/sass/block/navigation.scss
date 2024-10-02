@@ -1,7 +1,15 @@
-.navigation__list {
-  @include reset-list;
+.navigation {
+  &--header .navigation__link {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: calc(1em * 2 / 100);
+    text-transform: uppercase;
+    color: $white-color;
+    opacity: 0.7;
+  }
 
-  &--footer {
+  &--footer .navigation__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,6 +24,15 @@
       justify-content: start;
       gap: 30px;
     }
+  }
+}
+
+.navigation__list {
+  @include reset-list;
+
+  &--submenu .navigation__link {
+    letter-spacing: normal;
+    text-transform: none;
   }
 }
 
