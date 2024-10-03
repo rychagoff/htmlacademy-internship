@@ -1,5 +1,37 @@
+.page-header {
+  position: relative;
+  padding-top: 20px;
+  z-index: 2;
+}
+
+.page-header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__navigation {
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  right: $padding-offset;
+  transition: top 1s ease-in-out, bottom 1s ease-in-out;
+
+  &--opened {
+    top: calc(100% + 4px);
+    bottom: auto;
+  }
+}
+
 .page-header__button {
+  padding: 3px 4px;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: calc(1em * 2 / 100);
+  background-color: $white-color;
+
+  &::before,
+  &::after {
+    width: 46px;
+    height: 46px;
+  }
 }

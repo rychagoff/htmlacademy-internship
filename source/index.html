@@ -32,14 +32,23 @@
                     <use href="/__spritemap#sprite-logo"></use>
                   </svg>
                 </div>
-                <nav class="page-header__navigation navigation navigation--header">
+                <!-- Для показа меню добавляется класс page-header__navigation--opened -->
+                <nav class="page-header__navigation navigation navigation--header" id="burger">
                   <ul class="navigation__list">
                     <li class="navigation__item">
                       <a class="navigation__link" href="#about">О проекте</a>
                     </li>
                     <li class="navigation__item">
-                      <span class="navigation__link">Программы</span>
-                      <ul class="navigation__list navigation__list--submenu">
+                      <a class="navigation__link" href="#programs">
+                        <span>Программы</span>
+                        <button class="navigation__button navigation__button--icon" aria-expanded="false" aria-controls="internship-programs">
+                          <span class="visually-hidden">Показать меню</span>
+                          <svg width="12" height="7">
+                            <use href="/__spritemap#sprite-arrow-submenu"></use>
+                          </svg>
+                        </button>
+                      </a>
+                      <ul class="navigation__list navigation__list--submenu" id="internship-programs" hidden>
                         <li class="navigation__item">
                           <a class="navigation__link" href="#">Стажировки</a>
                         </li>
@@ -61,14 +70,39 @@
                       <a class="navigation__link" href="#reviews">Отзывы</a>
                     </li>
                     <li class="navigation__item">
-                      <a class="navigation__link" href="#news">Новости</a>
+                      <a class="navigation__link" href="#news">
+                        <span>Новости</span>
+                        <button class="navigation__button navigation__button--icon" aria-expanded="false" aria-controls="internship-news">
+                          <span class="visually-hidden">Показать меню</span>
+                          <svg width="12" height="7">
+                            <use href="/__spritemap#sprite-arrow-submenu"></use>
+                          </svg>
+                        </button>
+                        <ul class="navigation__list navigation__list--submenu" id="internship-news" hidden>
+                          <li class="navigation__item">
+                            <a class="navigation__link" href="#">Общее</a>
+                          </li>
+                          <li class="navigation__item">
+                            <a class="navigation__link" href="#">Волонтёрство</a>
+                          </li>
+                          <li class="navigation__item">
+                            <a class="navigation__link" href="#">Стажировки</a>
+                          </li>
+                          <li class="navigation__item">
+                            <a class="navigation__link" href="#">Карьера</a>
+                          </li>
+                          <li class="navigation__item">
+                            <a class="navigation__link" href="#">Путешествия</a>
+                          </li>
+                        </ul>
+                      </a>
                     </li>
                     <li class="navigation__item">
                       <a class="navigation__link" href="#contacts">Контакты</a>
                     </li>
                   </ul>
                 </nav>
-                <button class="page-header__button button button--accent button--text button--icon button--icon-burger" type="button">
+                <button class="page-header__button button button--accent button--text button--icon button--icon-burger" aria-expanded="false" aria-controls="burger" type="button">
                   <span>Меню</span>
                 </button>
 
