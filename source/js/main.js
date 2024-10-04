@@ -4,4 +4,5 @@
 // import 'swiper/css';
 
 import './blocks/mobile-menu';
+import './blocks/hero';
 import './blocks/programs';
