@@ -74,6 +74,15 @@
     }
   }
 
+  &--no-border {
+    padding: 0;
+    border: 0;
+  }
+
+  &--no-border::before {
+    right: 0;
+  }
+
   &--icon-arrow {
     --bgi: url("/__spritemap#sprite-arrow-view");
   }

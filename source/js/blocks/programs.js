@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 
-const swiperPrograms = new Swiper('.swiper', {
+const swiperPrograms = new Swiper('.programs__swiper', {
   init: false,
   modules: [ Navigation, Scrollbar ],
   navigation: {
@@ -36,5 +36,4 @@ const swiperPrograms = new Swiper('.swiper', {
   },
 });
 
-// init Swiper
 swiperPrograms.init();
