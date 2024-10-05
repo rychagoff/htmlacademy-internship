@@ -75,10 +75,6 @@ img {
 
 .custom-br {
   display: block;
-
-  @include viewport-tablet {
-    display: none;
-  }
 }
 
 .visually-hidden {
