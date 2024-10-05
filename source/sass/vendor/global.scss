@@ -23,6 +23,12 @@
   --swiper-pagination-bullet-opacity: 1;
   --swiper-pagination-bullet-horizontal-gap: 6px;
   --swiper-pagination-bullet-vertical-gap: 6px;
+
+  @include viewport-tablet {
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+  }
 }
 
 :root {
@@ -31,10 +37,12 @@
 
   @include viewport-tablet {
     --padding-offset: 45px;
+    --hero-slider: 1024px;
   }
 
   @include viewport-desktop {
     --padding-offset: 100px;
+    --hero-slider: 800px;
   }
 }
 

@@ -13,6 +13,11 @@
     content: "";
     width: 34px;
     height: 34px;
+
+    @include viewport-tablet {
+      width: 46px;
+      height: 46px;
+    }
   }
 
   &::before {
@@ -26,6 +31,10 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 8px 8px;
+
+    @include viewport-tablet {
+      mask-size: 10px 10px;
+    }
   }
 
   &--accent {
@@ -48,11 +57,21 @@
     letter-spacing: calc(1em * 2 / 100);
     text-transform: uppercase;
     text-decoration: none;
+
+    @include viewport-tablet {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 
   &--text span {
     margin-left: 16px;
     margin-right: 20px;
+
+    @include viewport-tablet {
+      margin-left: 26px;
+      margin-right: 30px;
+    }
   }
 
   &--icon-arrow {

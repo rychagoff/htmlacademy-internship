@@ -5,10 +5,15 @@
   left: 0;
   padding-top: 20px;
   z-index: 2;
+
+  @include viewport-tablet {
+    padding-top: 30px;
+  }
 }
 
 .page-header__inner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -32,9 +37,18 @@
   letter-spacing: calc(1em * 2 / 100);
   background-color: $white-color;
 
+  @include viewport-tablet {
+    padding: 4px;
+  }
+
   &::before,
   &::after {
     width: 46px;
     height: 46px;
   }
+}
+
+.page-header__button span {
+  margin-left: 16px;
+  margin-right: 20px;
 }
