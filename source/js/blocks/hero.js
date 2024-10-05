@@ -1,68 +1,57 @@
 import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
 
+// ФИНАЛЬНЫЙ ВАРИАНТ -- РАБОТАЕТ
+
 const swiperHero = new Swiper('.hero__slider', {
-  init: false,
+  loop: true,
   modules: [ Pagination ],
   pagination: {
-    // el: '.hero__pagination',
-    // el: '.hero__slide-bullets',
-    // bulletActiveClass: '.hero__slide-bullet--active',
+    el: '.page-header__pagination',
     clickable: true,
-    // type: 'custom'
+    renderBullet: function (index, className) {
+      return `<span class="${className}" data-pagination-index="${index}"></span>`;
+    },
   },
-  loop: true,
+  on: {
+    // Инициализируем слайдер
+    // При этом выполняем действия внутри function
+    init: function () {
+      this.slides.forEach((slide) => {
+        // Перебираем все слайды
+        // Для каждого слайда создаем элемент, в который поместим клонированные буллеты
+        const paginationClone = document.createElement('div');
+        paginationClone.classList.add('hero__pagination');
+
+        // Ищем исходные буллеты
+        // Перебираем, клонируем их и помещаем в созданный элемент
+        // Добавляем обработчик клика
+        const bullets = document.querySelectorAll('.page-header__pagination span');
+        bullets.forEach((bullet, bulletIndex) => {
+          const clonedBullet = bullet.cloneNode(true);
+          clonedBullet.addEventListener('click', () => {
+            // Используем стандартный Swiper-метод slideToLoop для переключения слайда
+            this.slideToLoop(bulletIndex);
+          });
+          paginationClone.appendChild(clonedBullet);
+        });
+
+        // Помещаем буллеты в каждый слайд с элементом "hero__pagination"
+        slide.querySelector('.hero__slide').appendChild(paginationClone);
+      });
+    },
+    // Вызываем обработчик каждый раз при смене слайда
+    // При этом выполняем действия внутри function
+    slideChange: function () {
+      const activeIndex = this.realIndex;
+
+      document.querySelectorAll('.hero__pagination').forEach((pagination) => {
+        pagination.querySelectorAll('span').forEach((bullet, bulletIndex) => {
+          bullet.classList.toggle('swiper-pagination-bullet-active', bulletIndex === activeIndex);
+        });
+      });
+    },
+  },
 });
 
-swiperHero.on('init', () => {
-  console.log('Активирован слайдер');
-  console.log(`Количество слайдов - ${swiperHero.slides.length}`);
-
-  const slides = swiperHero.el.querySelectorAll('.hero__slide');
-  const bulletsFragment = document.createDocumentFragment();
-
-  slides.forEach((slide) => {
-    const bullets = document.createElement('div');
-    bullets.className = 'hero__slide-bullets';
-
-    for(let i = 0; i < swiperHero.slides.length; i++) {
-      const bullet = document.createElement('span');
-      bullet.className = 'hero__slide-bullet';
-      bullet.setAttribute('data-index', i);
-      bullets.append(bullet);
-    }
-
-    bulletsFragment.appendChild(bullets);
-    slide.append(bulletsFragment);
-  });
-
-  const slideBullets = document.querySelector('.hero__pagination');
-  // const slideCustomBullets = slideBullets.cloneNode(true);
-  // console.log(slideBullets.classList.value);
-
-  // swiperHero.pagination['el'] = `.${slideBullets.classList.value}`;
-  // swiperHero.pagination['el'] = slideBullets;
-  swiperHero.pagination.init(slideBullets);
-  swiperHero.pagination.render(slideBullets);
-  swiperHero.pagination.update(slideBullets);
-
-  console.log(swiperHero.pagination);
-
-  // swiperHero.pagination.bullets = document.querySelector('.hero__slide-bullets');
-});
-
-  console.log(swiperHero.pagination);
-
-
-//   console.log(slides);
-//   // swiperHero.pagination.el = '.hero__slide-bullets';
-//   // swiperHero.pagination.el = '.hero__pagination';
-//   // console.log(swiperHero.pagination);
-
-// init Swiper
 swiperHero.init();
-
-swiperHero.on('slideChange', () => {
-  console.log('slide changed');
-});
-

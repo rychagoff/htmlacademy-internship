@@ -111,10 +111,11 @@
           </div>
         </header>
 
-        <!-- Slider main container -->
+        <!-- Слайдер -->
         <div class="page-header__slider hero__slider swiper">
           <div class="swiper-wrapper">
-            <!-- Slides -->
+
+            <!-- Слайды -->
             <div class="swiper-slide">
               <div class="container">
                 <article class="page-header__slide hero__slide">
@@ -133,7 +134,7 @@
                   </div>
 
                   <div class="hero__content">
-                    <h2 class="hero__title title title--xl">Глобальный профессиональный опыт обучения за рубежом</h2>
+                    <h2 class="hero__title title title--xl">Глобальный профессиональный опыт обучения за рубежом</h2>
                     <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
                     <div class="hero__buttons">
                       <a class="hero__button button button--accent button--text button--icon button--icon-thin-arrow" href="#">
@@ -206,8 +207,12 @@
               </div>
             </div>
           </div>
-          <!-- If we need pagination -->
-          <div class="hero__pagination swiper-pagination"></div>
+
+          <!-- Исходная пагинация -->
+          <!-- Из неё будем клонировать буллеты и записывать в отдельный div в каждый слайд -->
+          <!-- Класс "page-header__pagination" нужен для инициализации -->
+          <!-- Класс "hero__pagination" стилизует пагинацию -->
+          <div class="page-header__pagination swiper-pagination visually-hidden"></div>
         </div>
 
       </section>
