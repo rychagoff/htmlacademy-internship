@@ -4,7 +4,17 @@
   }
 }
 
-.programs__link span:not(.button__icon) {
+.programs__swiper {
+  @include viewport-tablet {
+    overflow: visible;
+  }
+
+  @include viewport-desktop {
+    overflow: hidden;
+  }
+}
+
+.programs__link span {
   margin-left: 26px;
   margin-right: 30px;
 }
