@@ -1,0 +1,224 @@
+.hero__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: $hero-slider;
+  padding: 94px 0 20px;
+
+  @include viewport-tablet {
+    padding-bottom: 60px;
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+
+  @include viewport-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 19px;
+  }
+
+  @include viewport-desktop {
+    max-width: 968px;
+    padding-right: 0;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $accent-color;
+    opacity: 0.2;
+  }
+}
+
+.hero__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: calc(50% - 14px) center;
+  object-fit: cover;
+
+  @include viewport-tablet {
+    object-position: calc(50% + 11px) center;
+  }
+
+  @include viewport-desktop {
+    object-position: center;
+  }
+}
+
+.hero__title {
+  padding: 20px 14px 16px;
+  font-size: 22px;
+  line-height: 26px;
+  color: $accent-color;
+  background-color: $white-color;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  @include viewport-tablet {
+    padding: 30px 40px 24px;
+    font-size: 36px;
+    line-height: 44px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  @include viewport-desktop {
+    padding: 40px 50px 30px;
+    font-size: 54px;
+    line-height: 62px;
+  }
+}
+
+.hero__content p {
+  position: relative;
+  max-width: 267px;
+  margin: 0;
+  padding: 0 14px 15px;
+  font-size: 16px;
+  background-color: $white-color;
+  border-bottom-right-radius: 16px;
+
+  @include viewport-tablet {
+    max-width: 340px;
+    padding: 0 15px 35px 40px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 30px;
+  }
+
+  @include viewport-desktop {
+    max-width: 511px;
+    padding: 0 15px 35px 50px;
+    line-height: 26px;
+  }
+
+  &:first-of-type::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 16px;
+    height: 20px;
+    background-color: $white-color;
+    mask-image:
+      linear-gradient(to top, $accent-color, $accent-color),
+      radial-gradient(16px 20px, $black-color 50%, transparent 51%);
+    mask-size: 50% 50%, 100%;
+    mask-position: top left, center;
+    mask-repeat: no-repeat, no-repeat;
+    mask-composite: subtract;
+  }
+}
+
+.hero__buttons {
+  position: relative;
+  width: min-content;
+  padding: 10px 15px;
+  background-color: $white-color;
+  border-radius: 0 0 16px 16px;
+
+  @include viewport-tablet {
+    padding: 0 40px 35px 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 30px;
+  }
+
+  @include viewport-desktop {
+    padding: 10px 50px 35px 15px;
+  }
+
+  &:first-of-type::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: $white-color;
+    mask-image:
+      linear-gradient(to top, $accent-color, $accent-color),
+      radial-gradient(20px 20px, $black-color 50%, transparent 51%);
+    mask-size: 50% 50%, 100%;
+    mask-position: top left, center;
+    mask-repeat: no-repeat, no-repeat;
+    mask-composite: subtract;
+
+    @include viewport-tablet {
+      width: 52px;
+      height: 52px;
+      mask-image:
+        linear-gradient(to top, $accent-color, $accent-color),
+        radial-gradient(52px 52px, $black-color 50%, transparent 51%);
+    }
+  }
+}
+
+.hero__button {
+  @include viewport-desktop {
+    padding: 5px;
+  }
+}
+
+.hero__pagination {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: fit-content;
+  padding: 10px 16px;
+  background-color: $white-color;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  order: -1;
+
+  @include viewport-tablet {
+    padding: 14px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: $white-color;
+    mask-image:
+      linear-gradient(to top, $accent-color, $accent-color),
+      radial-gradient(20px 20px, $black-color 50%, transparent 51%);
+    mask-size: 50% 50%, 100%;
+    mask-position: bottom left, center;
+    mask-repeat: no-repeat, no-repeat;
+    mask-composite: subtract;
+
+    @include viewport-tablet {
+      width: 40px;
+      height: 40px;
+      mask-image:
+        linear-gradient(to top, $accent-color, $accent-color),
+        radial-gradient(40px 40px, $black-color 50%, transparent 51%);
+    }
+  }
+}
+
+.hero__pagination .swiper-pagination-bullet {
+  border: 2px solid $accent-color;
+}

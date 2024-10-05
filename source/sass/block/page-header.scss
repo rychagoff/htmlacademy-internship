@@ -1,0 +1,54 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 20px;
+  z-index: 2;
+
+  @include viewport-tablet {
+    padding-top: 30px;
+  }
+}
+
+.page-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__navigation {
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  right: $padding-offset;
+  transition: top 1s ease-in-out, bottom 1s ease-in-out;
+
+  &--opened {
+    top: calc(100% + 4px);
+    bottom: auto;
+  }
+}
+
+.page-header__button {
+  padding: 3px 4px;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: calc(1em * 2 / 100);
+  background-color: $white-color;
+
+  @include viewport-tablet {
+    padding: 4px;
+  }
+
+  &::before,
+  &::after {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.page-header__button span {
+  margin-left: 16px;
+  margin-right: 20px;
+}
