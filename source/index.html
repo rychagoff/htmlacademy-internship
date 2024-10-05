@@ -21,6 +21,7 @@
       <h1 class="visually-hidden">Программа повышения квалификации молодых специалистов «Стажировка»</h1>
 
       <section class="hero" data-test="hero">
+        <h2 class="visually-hidden">Что предлагает программа «Стажировка»?</h2>
 
         <header class="page-header">
           <div class="page-header__line">
@@ -32,8 +33,8 @@
                     <use href="/__spritemap#sprite-logo"></use>
                   </svg>
                 </div>
-                <!-- Для показа меню добавляется класс page-header__navigation--opened -->
-                <nav class="page-header__navigation navigation navigation--header" id="burger">
+                <!-- Для показа меню к классу page-header__navigation добавляется модификатор opened -->
+                <nav class="page-header__navigation navigation navigation--header" id="burger" aria-label="Главное меню сайта">
                   <ul class="navigation__list">
                     <li class="navigation__item">
                       <a class="navigation__link" href="#about">О проекте</a>
@@ -41,13 +42,13 @@
                     <li class="navigation__item">
                       <a class="navigation__link" href="#programs">
                         <span>Программы</span>
-                        <button class="navigation__button navigation__button--icon" aria-expanded="false" aria-controls="internship-programs">
-                          <span class="visually-hidden">Показать меню</span>
-                          <svg width="12" height="7">
-                            <use href="/__spritemap#sprite-arrow-submenu"></use>
-                          </svg>
-                        </button>
                       </a>
+                      <button class="navigation__button navigation__button--icon" aria-expanded="false" aria-controls="internship-programs" type="button">
+                        <span class="visually-hidden">Показать меню</span>
+                        <svg width="12" height="7">
+                          <use href="/__spritemap#sprite-arrow-submenu"></use>
+                        </svg>
+                      </button>
                       <ul class="navigation__list navigation__list--submenu" id="internship-programs" hidden>
                         <li class="navigation__item">
                           <a class="navigation__link" href="#">Стажировки</a>
@@ -72,30 +73,30 @@
                     <li class="navigation__item">
                       <a class="navigation__link" href="#news">
                         <span>Новости</span>
-                        <button class="navigation__button navigation__button--icon" aria-expanded="false" aria-controls="internship-news">
-                          <span class="visually-hidden">Показать меню</span>
-                          <svg width="12" height="7">
-                            <use href="/__spritemap#sprite-arrow-submenu"></use>
-                          </svg>
-                        </button>
-                        <ul class="navigation__list navigation__list--submenu" id="internship-news" hidden>
-                          <li class="navigation__item">
-                            <a class="navigation__link" href="#">Общее</a>
-                          </li>
-                          <li class="navigation__item">
-                            <a class="navigation__link" href="#">Волонтёрство</a>
-                          </li>
-                          <li class="navigation__item">
-                            <a class="navigation__link" href="#">Стажировки</a>
-                          </li>
-                          <li class="navigation__item">
-                            <a class="navigation__link" href="#">Карьера</a>
-                          </li>
-                          <li class="navigation__item">
-                            <a class="navigation__link" href="#">Путешествия</a>
-                          </li>
-                        </ul>
                       </a>
+                      <button class="navigation__button navigation__button--icon" aria-expanded="false" aria-controls="internship-news" type="button">
+                        <span class="visually-hidden">Показать меню</span>
+                        <svg width="12" height="7">
+                          <use href="/__spritemap#sprite-arrow-submenu"></use>
+                        </svg>
+                      </button>
+                      <ul class="navigation__list navigation__list--submenu" id="internship-news" hidden>
+                        <li class="navigation__item">
+                          <a class="navigation__link" href="#">Общее</a>
+                        </li>
+                        <li class="navigation__item">
+                          <a class="navigation__link" href="#">Волонтёрство</a>
+                        </li>
+                        <li class="navigation__item">
+                          <a class="navigation__link" href="#">Стажировки</a>
+                        </li>
+                        <li class="navigation__item">
+                          <a class="navigation__link" href="#">Карьера</a>
+                        </li>
+                        <li class="navigation__item">
+                          <a class="navigation__link" href="#">Путешествия</a>
+                        </li>
+                      </ul>
                     </li>
                     <li class="navigation__item">
                       <a class="navigation__link" href="#contacts">Контакты</a>
@@ -112,13 +113,13 @@
         </header>
 
         <!-- Слайдер -->
-        <div class="page-header__slider hero__slider swiper">
+        <div class="hero__slider swiper">
           <div class="swiper-wrapper">
 
             <!-- Слайды -->
             <div class="swiper-slide">
               <div class="container">
-                <article class="page-header__slide hero__slide">
+                <article class="hero__slide">
 
                   <div class="hero__image">
                     <picture>
@@ -148,7 +149,7 @@
             </div>
             <div class="swiper-slide">
               <div class="container">
-                <article class="page-header__slide hero__slide">
+                <article class="hero__slide">
 
                   <div class="hero__image">
                     <picture>
@@ -178,7 +179,7 @@
             </div>
             <div class="swiper-slide">
               <div class="container">
-                <article class="page-header__slide hero__slide">
+                <article class="hero__slide">
 
                   <div class="hero__image">
                     <picture>
@@ -210,9 +211,9 @@
 
           <!-- Исходная пагинация -->
           <!-- Из неё будем клонировать буллеты и записывать в отдельный div в каждый слайд -->
-          <!-- Класс "page-header__pagination" нужен для инициализации -->
+          <!-- Класс "hero__pagination-template" нужен для инициализации -->
           <!-- Класс "hero__pagination" стилизует пагинацию -->
-          <div class="page-header__pagination swiper-pagination visually-hidden"></div>
+          <div class="hero__pagination-template swiper-pagination visually-hidden"></div>
         </div>
 
       </section>
@@ -565,7 +566,7 @@
                 <use href="/__spritemap#sprite-logo"></use>
               </svg>
             </div>
-            <nav class="footer__navigation navigation navigation--footer">
+            <nav class="footer__navigation navigation navigation--footer" aria-label="Дублирующее меню в подвале сайта">
               <ul class="navigation__list">
                 <li class="navigation__item">
                   <a class="navigation__link" href="#about">О проекте</a>
@@ -622,11 +623,9 @@
     </svg> -->
 
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <!--
-    <div data-test="news">news</div>
+    <!-- <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    -->
+    <div data-test="reviews">reviews</div> -->
 
     <script type="module" src="js/main.js"></script>
   </body>

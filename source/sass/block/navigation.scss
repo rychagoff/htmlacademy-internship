@@ -13,6 +13,12 @@
     gap: 28px;
   }
 
+  &--header .navigation__item {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+  }
+
   &--header .navigation__link {
     display: flex;
     align-items: center;
@@ -80,11 +86,14 @@
   }
 }
 
-.navigation__link span {
-  display: block;
-}
+// .navigation__link span {
+//   display: block;
+// }
 
 .navigation__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 12px;
   height: 12px;
   margin: 0;

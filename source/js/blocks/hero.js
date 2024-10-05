@@ -7,7 +7,7 @@ const swiperHero = new Swiper('.hero__slider', {
   loop: true,
   modules: [ Pagination ],
   pagination: {
-    el: '.page-header__pagination',
+    el: '.hero__pagination-template',
     clickable: true,
     renderBullet: function (index, className) {
       return `<span class="${className}" data-pagination-index="${index}"></span>`;
@@ -26,7 +26,7 @@ const swiperHero = new Swiper('.hero__slider', {
         // Ищем исходные буллеты
         // Перебираем, клонируем их и помещаем в созданный элемент
         // Добавляем обработчик клика
-        const bullets = document.querySelectorAll('.page-header__pagination span');
+        const bullets = document.querySelectorAll('.hero__pagination-template span');
         bullets.forEach((bullet, bulletIndex) => {
           const clonedBullet = bullet.cloneNode(true);
           clonedBullet.addEventListener('click', () => {
