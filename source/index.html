@@ -479,64 +479,61 @@
       </section>
 
       <section class="section form" data-test="form">
-        <div class="container">
-          <div class="form__inner">
+        <div class="form__bg">
+          <div class="container">
+            <div class="form__inner">
 
-            <div class="form__wrapper">
-              <h2 class="form__title title title--md">Напишите нам</h2>
-              <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-              <form class="form__feedback" action="#" method="post" target="_blank">
-                <div class="form__group">
-                  <label class="form__label">
-                    <span>Имя</span>
-                    <input class="input input--lighten input--text" type="text" name="name" required>
-                  </label>
-                </div>
-                <div class="form__group">
-                  <label class="form__label">
-                    <span>Телефон</span>
-                    <input class="input input--lighten input--text" type="tel" name="phone" maxlength="21" required>
-                  </label>
-                </div>
-                <div class="form__group form__group--textarea">
-                  <label class="form__label" for="textarea">
-                    <span>Ваше сообщение</span>
-                  </label>
-                  <textarea class="input input--lighten input--textarea" name="message" autocomplete="off" id="textarea" required></textarea>
-                </div>
-                <div class="form__group form__group--select">
-                  <label class="form__label" for="city-select">
-                    <span>Выберите город</span>
-                  </label>
-                  <div class="form__label-wrapper">
-                    <select class="input input--lighten input--select" name="city" id="city-select" required>
-                      <option value="" label=" "></option>
-                      <option value="petersburg" label="Санкт-Петербург">Санкт-Петербург</option>
-                      <option value="samara" label="Самара">Самара</option>
-                      <option value="perm" label="Пермь">Пермь</option>
-                      <option value="novosibirsk" label="Новосибирск">Новосибирск</option>
-                     </select>
+              <div class="form__wrapper">
+                <h2 class="form__title title title--md">Напишите нам</h2>
+                <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+                <form class="form__feedback" action="#" method="post" target="_blank">
+                  <div class="form__group">
+                    <label class="form__label">
+                      <span>Имя</span>
+                      <input class="input input--lighten input--text" type="text" name="name" required>
+                    </label>
                   </div>
-                </div>
-                <div class="form__group">
-                  <label class="form__label form__label--agreement">
-                    <input class="visually-hidden" type="checkbox" name="agreement" value="1" required>
-                    <span class="mark mark--checkbox">
-                      <span>Я согласен на обработку моих персональных<span class="custom-br"></span> данных</span>
-                    </span>
-                  </label>
-                </div>
-                <button class="form__button button button--text button--icon button--light" type="submit">
-                  <span>Отправить</span>
-                  <span class="button__icon">
-                    <svg width="8" height="8">
-                      <use href="/__spritemap#sprite-arrow"></use>
-                    </svg>
-                  </span>
-                </button>
-              </form>
-            </div>
+                  <div class="form__group">
+                    <label class="form__label">
+                      <span>Телефон</span>
+                      <input class="input input--lighten input--text" type="tel" name="phone" maxlength="21" required>
+                    </label>
+                  </div>
+                  <div class="form__group form__group--textarea">
+                    <label class="form__label" for="textarea">
+                      <span>Ваше сообщение</span>
+                    </label>
+                    <textarea class="input input--lighten input--textarea" name="message" autocomplete="off" id="textarea" required></textarea>
+                  </div>
+                  <div class="form__group form__group--select">
+                    <label class="form__label" for="city-select">
+                      <span>Выберите город</span>
+                    </label>
+                    <div class="form__label-wrapper">
+                      <select class="input input--lighten input--select" name="city" id="city-select" required>
+                        <option value="" label=" "></option>
+                        <option value="petersburg" label="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="samara" label="Самара">Самара</option>
+                        <option value="perm" label="Пермь">Пермь</option>
+                        <option value="novosibirsk" label="Новосибирск">Новосибирск</option>
+                       </select>
+                    </div>
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label form__label--agreement">
+                      <input class="visually-hidden" type="checkbox" name="agreement" value="1" required>
+                      <span class="mark mark--checkbox">
+                        <span>Я согласен на обработку моих персональных<span class="custom-br"></span> данных</span>
+                      </span>
+                    </label>
+                  </div>
+                  <button class="form__button button button--white button--text button--icon-arrow" type="submit">
+                    <span>Отправить</span>
+                  </button>
+                </form>
+              </div>
 
+            </div>
           </div>
         </div>
       </section>
