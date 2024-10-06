@@ -33,6 +33,7 @@
 }
 
 .footer__navigation {
+  flex: 1 0 auto;
   padding: 10px 0;
 
   @include viewport-tablet {
@@ -72,6 +73,7 @@
   gap: 10px;
 
   @include viewport-desktop {
+    gap: 20px;
     order: 3;
     justify-self: end;
   }
