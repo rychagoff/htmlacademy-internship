@@ -40,7 +40,8 @@
     row-gap: 20px;
 
     @include viewport-tablet {
-      gap: 16px;
+      justify-content: flex-end;
+      gap: 15px;
     }
 
     @include viewport-desktop {
