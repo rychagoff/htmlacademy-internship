@@ -1,6 +1,20 @@
 .form {
-  margin: 40px 0;
+  padding: 40px 0;
   color: $white-color;
+  background-color: $grey-color;
+
+  @include viewport-tablet {
+    margin: 0;
+    padding: 50px 0;
+  }
+
+  @include viewport-desktop {
+    padding: 60px 0;
+  }
+}
+
+.form__bg {
+  padding: 43px 0 40px;
   background-image:
     image-set(
       url("../../img/form/form-bg-mobile@2x.webp") type("image/webp") 2x,
@@ -13,7 +27,7 @@
   background-size: cover;
 
   @include viewport-tablet {
-    margin: 0;
+    padding: 0;
     background-image: none;
   }
 }
@@ -61,7 +75,7 @@
 }
 
 .form__wrapper {
-  padding: 15px;
+  padding: 15px 15px 27px;
   background-color: $accent-color;
   border-radius: 16px;
 
@@ -123,6 +137,20 @@
     flex-direction: column;
     gap: 12px;
   }
+
+  &--select {
+    margin-right: 10px;
+
+    @include viewport-tablet {
+      margin-right: 0;
+    }
+  }
+
+  &--select .form__label span {
+    @include viewport-desktop {
+      line-height: 14px;
+    }
+  }
 }
 
 .form__label-wrapper {
@@ -152,6 +180,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  &--agreement .custom-br {
+    @include viewport-tablet {
+      display: none;
+    }
+  }
 }
 
 .form__label span {
@@ -181,6 +215,7 @@
 }
 
 .form__button {
+  align-self: stretch;
   margin-right: 10px;
 
   @include viewport-tablet {
